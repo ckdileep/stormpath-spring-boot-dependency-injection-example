@@ -13,19 +13,25 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.inject.Inject;
+
 @RestController
 public class HomeController {
 
-    @Autowired
+    //@Autowired
+	@Inject
     ApplicationContext appContext;
 
-    @Autowired
+    //@Autowired
+    @Inject
     GreetingService greetingService;
 
-    @Autowired
+    //@Autowired
+    @Inject
     MeaningOfLife meaningOfLife;
 
-    @Autowired
+    //@Autowired
+    @Inject
     NameHelper nameHelper;
 
     @RequestMapping("/")

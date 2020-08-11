@@ -1,3 +1,20 @@
+** Build Instructions added by Dileep **
+* Run mvn clean install
+* go to command line
+* cd stormpath-spring-boot-dependency-injection-example\target
+* java -jar dependency-injection-0.0.1-SNAPSHOT.jar
+* Run following in browser
+1. http localhost:8080 -  
+returns a greeting from the configured 'greetinService' - English by default
+2. http localhost:8080/meaningOfLife
+    returns the value from the 'MeaningOfLife' component injected in the constructor - 0 by default
+3. http localhost:8080/name?type=[dog|person]
+returns the name found in the appropriate 'Nameable' component injected using setters in 'NameHelper'
+4. http localhost:8080/allNames
+returns all the names from all the 'Nameables' loaded by Spring
+5. http localhost:8080/beans[?q=<search term>]
+returns all the bean names loaded by Spring. Takes an optional 'q' query param to narrow the search to beans whose names contain the search term (case insensitive)
+
 #Stormpath is Joining Okta
 We are incredibly excited to announce that [Stormpath is joining forces with Okta](https://stormpath.com/blog/stormpaths-new-path?utm_source=github&utm_medium=readme&utm-campaign=okta-announcement). Please visit [the Migration FAQs](https://stormpath.com/oktaplusstormpath?utm_source=github&utm_medium=readme&utm-campaign=okta-announcement) for a detailed look at what this means for Stormpath users.
 
